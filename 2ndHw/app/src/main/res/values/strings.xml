@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">2nd Hw</string>
+    <string name="convertBt"> Click to Convert </string>
+    <string name="enterHint">Enter the value in Shekel</string>
+    <string name="Ineuro">In Euro:</string>
+
+</resources>

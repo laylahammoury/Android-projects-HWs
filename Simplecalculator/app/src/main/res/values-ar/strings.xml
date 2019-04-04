@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">آلة حاسبة</string>
+    <string name="enternum1">أدخل الرقم الأول</string>
+    <string name="enternum2">أدخل الرقم الثاني</string>
+</resources>

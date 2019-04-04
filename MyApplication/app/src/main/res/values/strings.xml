@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Clickbutton" >click Me !!</string>
+    <string name="secButton"> CLick the second button</string>
+    <string name="helloMsg"> Hello to my first application</string>
+
+</resources>

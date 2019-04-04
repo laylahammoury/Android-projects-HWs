@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Enter the information about the student:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/enterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Name:"
+            android:inputType="textPersonName"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/enterId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="ID:"
+            android:inputType="number"
+            android:background="@drawable/border"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <EditText
+        android:id="@+id/enterMajor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Major:"
+        android:inputType="text"
+        android:background="@drawable/border"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+    <EditText
+        android:id="@+id/enterAvg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Average:"
+        android:inputType="numberDecimal"
+        android:background="@drawable/border"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+
+
+
+    <CheckBox
+        android:id="@+id/enterAtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attended?"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/dateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="Date of birth"
+            android:inputType="datetime"
+         />
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Save"
+            android:layout_gravity="center"
+           />
+
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What else in your coffee ?"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/decaf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Decaf"
+            />
+        <RadioButton
+            android:id="@+id/expresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expresso"
+            />
+        <RadioButton
+            android:id="@+id/colombian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colombian"
+            />
+
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/creamchk"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cream" />
+
+    <CheckBox
+        android:id="@+id/sugarchk"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sugar" />
+
+    <Button
+        android:id="@+id/payBtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:text="Pay" />
+
+</LinearLayout>

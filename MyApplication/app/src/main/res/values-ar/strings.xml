@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">التطبيق الخاص بي</string>
+    <string name="Clickbutton" >إضغط هنا</string>
+    <string name="secButton"> إضغط على الرز الثاني</string>
+    <string name="helloMsg"> اهلا بك في برنامجي الاول</string>
+
+</resources>
