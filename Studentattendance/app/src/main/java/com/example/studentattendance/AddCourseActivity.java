@@ -6,13 +6,13 @@ import android.widget.EditText;
 
 public class AddCourseActivity extends AppCompatActivity {
 
-    EditText coursename;
+    EditText courseName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_course);
 
-        coursename = findViewById(R.id.coursename);
+        courseName = findViewById(R.id.coursename);
 
     }
 }
