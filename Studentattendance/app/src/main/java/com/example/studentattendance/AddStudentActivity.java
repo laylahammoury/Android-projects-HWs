@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class AddStudentActivity extends AppCompatActivity {
 
     EditText studentname , studentid;
-    Button addBtn;
+    Button addbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class AddStudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_student);
         this.studentid =findViewById(R.id.studentid);
         this.studentname =findViewById(R.id.studentname);
-        this.addBtn =findViewById(R.id.addbtn);
+        this.addbtn =findViewById(R.id.addbtn);
 
         //get the elements by id
         //        //create adapter object of the database
