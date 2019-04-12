@@ -12,7 +12,7 @@
     <string name="course_name">إسم المساق</string>
 
     //buttons
-    <string name="Add_student">أضِف  الطالب</string>
+    <string name="Add_student">أضِف   الطالب</string>
     <string name="Add_course">أضِف المساق</string>
 
 </resources>
