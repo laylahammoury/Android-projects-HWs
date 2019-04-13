@@ -33,8 +33,8 @@ public class StudentAdapter extends ArrayAdapter {
 
         Students student = (Students) getItem(position);
 
-        name.setText(student.getStudent_name());
-        id.setText(student.getStudent_id()+"");
+        name.setText(""+student.getStudent_name());
+        id.setText(""+student.getStudent_id());
 
         return convertView;
     }

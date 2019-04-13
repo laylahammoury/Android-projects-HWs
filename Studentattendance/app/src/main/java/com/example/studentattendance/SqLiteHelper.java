@@ -54,9 +54,9 @@ public class SqLiteHelper extends SQLiteOpenHelper {
     db.execSQL("CREATE TABLE " + ATTEND_TABLE + "("
             + STUDENT_ID + " integer ,"
             + COURSE_ID + " integer , "
-            + LECTURE_ID + "integer , "
-            +ATTEND_NOTE + "text ,"
-            + ATTEND_ATTENDANCE +"integer ," +
+            + LECTURE_ID + " integer , "
+            +ATTEND_NOTE + " text ,"
+            + ATTEND_ATTENDANCE +" integer ," +
             "PRIMARY KEY (" +COURSE_ID + " , " + STUDENT_ID + " , " + LECTURE_ID + "))"
     );
 

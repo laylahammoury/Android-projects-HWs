@@ -13,7 +13,8 @@ public class AddCourseActivity extends AppCompatActivity {
 
     EditText coursename , courseid;
     Button addBtn , listAllBtn;
-    Courses course;
+    Courses course = new Courses();
+
     DatabaseAdapter databaseAdapter;
    // public  static ArrayList<Courses> c;
 

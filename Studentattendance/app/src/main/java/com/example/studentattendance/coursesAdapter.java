@@ -29,9 +29,9 @@ public class coursesAdapter extends ArrayAdapter<Courses> {
         TextView courseid = convertView.findViewById(R.id.courseid);
 
 //        coursename.setText("@string/course_name "+course.getCourse_name());
-        coursename.setText("course_name "+course.getCourse_name());
+        coursename.setText(""+course.getCourse_name());
 //        courseid.setText("@string/course_id "+course.getCourse_id());
-        courseid.setText("course_id "+course.getCourse_id());
+        courseid.setText(""+course.getCourse_id());
 
 
         return convertView;
