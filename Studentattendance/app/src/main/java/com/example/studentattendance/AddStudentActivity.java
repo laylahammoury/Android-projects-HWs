@@ -1,15 +1,22 @@
 package com.example.studentattendance;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class AddStudentActivity extends AppCompatActivity {
 
     EditText studentname , studentid;
-    Button addbtn;
+    Button addBtn,listAllBtn;
+
+    DatabaseAdapter databaseAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +24,34 @@ public class AddStudentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_student);
         this.studentid =findViewById(R.id.studentid);
         this.studentname =findViewById(R.id.studentname);
-        this.addbtn =findViewById(R.id.addbtn);
+        this.addBtn =findViewById(R.id.addbtn);
+        this.listAllBtn =findViewById(R.id.listAllBtn);
+        this.databaseAdapter = new DatabaseAdapter(this);
 
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseAdapter.open();
+                Students student = new Students(Integer.parseInt(studentid.getText().toString()),
+                        studentname.getText().toString());
+
+                databaseAdapter.addStudent(student);
+
+                studentid.setText("");
+                studentname.setText("");
+                databaseAdapter.close();
+            }
+        });
+
+        listAllBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListStudentsActivity.class);
+                startActivity(intent);
+
+            }
+        });
         //get the elements by id
         //        //create adapter object of the database
         //        //button listener

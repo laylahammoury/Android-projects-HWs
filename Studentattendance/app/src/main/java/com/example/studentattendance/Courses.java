@@ -9,6 +9,9 @@ public class Courses {
         this.course_name = course_name;
     }
 
+    public Courses() {
+    }
+
     public int getCourse_id() {
         return course_id;
     }
