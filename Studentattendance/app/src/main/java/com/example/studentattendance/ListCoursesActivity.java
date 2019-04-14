@@ -1,5 +1,6 @@
 package com.example.studentattendance;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -61,11 +62,13 @@ public class ListCoursesActivity extends AppCompatActivity {
         switch(item.getItemId())
         {
             case R.id.item1:{
-
+                Intent intent1 = new Intent(getApplicationContext(), AddStdToCourse.class);
+                startActivity(intent1);
 
                 break;}
             case R.id.item2:
-
+                Intent intent1 = new Intent(getApplicationContext(), UpdateCourse.class);
+                startActivity(intent1);
                 break;
             case R.id.item3:
                 courses.remove(course_pos);
