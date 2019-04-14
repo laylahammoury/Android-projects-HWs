@@ -11,6 +11,8 @@
     <string name="course_name">course name</string>
     <string name="course_id">course id</string>
 
+
+
     //Buttons
     <string name="Add_student">Add student </string>
     <string name="Add_course">Add course</string>

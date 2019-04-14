@@ -1,21 +1,25 @@
 package com.example.studentattendance;
 
 import android.content.Intent;
+import android.media.browse.MediaBrowser;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ListCoursesActivity extends AppCompatActivity {
     DatabaseAdapter databaseAdapter;
     ListView coursesList;
     ArrayList<Courses> courses = new ArrayList<>();
     coursesAdapter coursesAdapter;
+    int courseid;
     int course_pos;
 
     @Override
@@ -35,9 +39,14 @@ public class ListCoursesActivity extends AppCompatActivity {
         databaseAdapter.close();
 
         coursesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                 course_pos=position;
+                course_pos=position;
+                Courses course =(Courses) parent.getAdapter().getItem(position);
+
+                 courseid =course.getCourse_id();
+
 
             }
         });
@@ -62,13 +71,15 @@ public class ListCoursesActivity extends AppCompatActivity {
         switch(item.getItemId())
         {
             case R.id.item1:{
-                Intent intent1 = new Intent(getApplicationContext(), AddStdToCourse.class);
-                startActivity(intent1);
+                Intent intent = new Intent(getApplicationContext(), AddStdToCourse.class);
+                intent.putExtra("courseid",courseid);
+
+                startActivity(intent);
 
                 break;}
             case R.id.item2:
-                Intent intent1 = new Intent(getApplicationContext(), UpdateCourse.class);
-                startActivity(intent1);
+                Intent intent = new Intent(getApplicationContext(), UpdateCourse.class);
+                startActivity(intent);
                 break;
             case R.id.item3:
                 courses.remove(course_pos);
