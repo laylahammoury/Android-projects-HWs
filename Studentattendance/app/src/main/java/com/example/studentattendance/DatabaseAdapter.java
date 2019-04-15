@@ -65,7 +65,7 @@ public class DatabaseAdapter {
     public ArrayList<Students> getStudentsNotInTheCourse (int courseId){
 
          Cursor cursor = this.database.query(SqLiteHelper.STUDENT_TABLE, StudentsColumns,STUDENT_ID+ "NOT IN ("+
-                 this.database.query(SqLiteHelper.STUDENT_ID, EnrollmentColumns,COURSE_ID+ "= '" + courseId + "'", null,
+                 this.database.query(SqLiteHelper.ENROLLMENT_TABLE, new String []{STUDENT_ID},COURSE_ID+ "= " + courseId , null,
                          null, null, null)+") ", null,
                 null, null, null);
 

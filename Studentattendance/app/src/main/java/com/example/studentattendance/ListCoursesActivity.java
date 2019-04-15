@@ -26,31 +26,23 @@ public class ListCoursesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_courses);
-        registerForContextMenu(coursesList);
+
 
         this.coursesList = findViewById(R.id.coursesList);
+        registerForContextMenu(coursesList);
         this.databaseAdapter = new DatabaseAdapter(this);
 
         databaseAdapter.open();
         courses = databaseAdapter.getAllCourses();
 
-        coursesAdapter = new coursesAdapter(this , courses);
+        coursesAdapter = new coursesAdapter(this, courses);
         this.coursesList.setAdapter(coursesAdapter);
         databaseAdapter.close();
 
-        coursesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                course_pos=position;
-                Courses course =(Courses) parent.getAdapter().getItem(position);
-
-                 courseid =course.getCourse_id();
-
-
-            }
-        });
     }
+
+
+
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -59,6 +51,8 @@ public class ListCoursesActivity extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo info=  (AdapterView.AdapterContextMenuInfo)menuInfo;
         if(v.getId()==R.id.coursesList)
             getMenuInflater().inflate(R.menu.courses_menue,menu);
+        courseid =courses.get(info.position).getCourse_id();
+
 
 
     }

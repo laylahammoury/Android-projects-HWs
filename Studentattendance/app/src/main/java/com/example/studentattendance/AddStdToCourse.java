@@ -18,7 +18,7 @@ public class AddStdToCourse extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent=getIntent();
-         courseId=intent.getIntExtra("courseid",0);
+         courseId=intent.getIntExtra("courseid",-1);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_std_to_course);
         studentsList =findViewById(R.id.studentslistTobeAdded);
@@ -35,7 +35,7 @@ public class AddStdToCourse extends AppCompatActivity {
         studentsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Students student =(Students) parent.getAdapter().getItem(position);
+                Students student =students.get(position);
 
                 studentid =student.getStudent_id();
                 databaseAdapter.open();
